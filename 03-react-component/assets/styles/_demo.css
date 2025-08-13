@@ -33,7 +33,7 @@ body {
   font-size: 35vh;
   font-weight: 100;
   line-height: 1;
-  
+
   &.is-animate {
     animation: wiggle 600ms infinite alternate;
   }
