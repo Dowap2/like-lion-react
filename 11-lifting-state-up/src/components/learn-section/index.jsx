@@ -9,12 +9,16 @@ export default function LearnSection({
   title,
   showTitle = false,
   children,
+  className = '',
   ...restProps
 }) {
   return (
-    <section {...restProps}>
+    <section className={`${baseClassNames} ${className}`.trim()} {...restProps}>
       <h1 className={showTitle ? null : 'sr-only'}>{title}</h1>
       {children}
     </section>
   )
 }
+
+const baseClassNames =
+  'flex flex-col items-center gap-3 m-10 border-8 border-[hsla(30,100%,80%)] border-solid rounded-2xl p-8 transition-[border-color] duration-400 ease-initial'
