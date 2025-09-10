@@ -1,5 +1,5 @@
-import { User } from '@supabase/supabase-js'
 import type { MouseEvent } from 'react'
+import type { ProfilePartial } from '@/libs/supabase'
 import { navigate, tw } from '@/utils'
 import { Page } from './navigation'
 
@@ -10,7 +10,7 @@ export interface NavigationItem {
 }
 
 interface Props {
-  user: User | null
+  user: ProfilePartial | null
   item: NavigationItem
 }
 
